@@ -19,9 +19,16 @@ function TodoListItem({ item, onDelete }) {
     localStorage.setItem(item.id, JSON.stringify(targetList));
   };
 
+  const handleRewrite = (e) => {
+    item.content = e.target.value;
+    const targetList = JSON.parse(localStorage.getItem(item.id));
+    targetList.content = e.target.value;
+    localStorage.setItem(item.id, JSON.stringify(targetList));
+  };
+
   return (
     <div className="todolist">
-      <p>{item.content}</p>
+      <textArea onChange={handleRewrite}>{item.content}</textArea>
       <button onClick={handleDoing}>DOING</button>
       <button onClick={handelDone}>DONE</button>
       <button onClick={handleDeleteClick}>DELETE</button>
