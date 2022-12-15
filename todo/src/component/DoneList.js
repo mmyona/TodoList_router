@@ -20,6 +20,7 @@ function DoneList() {
     <>
       <h1>Done List</h1>
       <ul>
+        {"progress : " + doneLists.length + " / " + lists.length}
         {doneLists.map((list) => {
           return (
             <li key={list.uuid} className="listItems">
