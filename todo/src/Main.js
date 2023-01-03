@@ -27,10 +27,10 @@ function Main() {
               <Link to="/done">Done List</Link>
             </li>
             <li className="list">
-              <Link to="/madeby">Made By</Link>
+              <Link to="/madeby">Profile</Link>
             </li>
             <li className="list">
-              <Link to="/more">More</Link>
+              <Link to="/more">Opinion</Link>
             </li>
           </ul>
         </nav>
